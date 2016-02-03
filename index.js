@@ -6,7 +6,7 @@ var PORT = 8080;
 // App
 var app = express();
 app.get('/', function (req, res) {
-  res.send('Hello Oncoscape!!!\n');
+  res.send('<h2>Hello Oncoscape!!!</h2>\n');
 });
 
 app.listen(PORT);
