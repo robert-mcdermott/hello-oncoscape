@@ -4,9 +4,15 @@ var express = require('express');
 var PORT = 8080;
 
 // App
+var userCount = 0;
 var app = express();
-app.get('/', function (req, res) {
-  res.send('<h2>Hello Oncoscape!!!</h2>\n');
+app.get('/', function (request, response) {
+userCount++;
+response.writeHead(200, {'Content-Type': 'text/html'});
+    response.write('<h1>Hello Oncoscape Techies!</h1>\n');
+    response.write('<hr>\n');
+    response.write('<h3>There have been <strong>' + userCount + '</strong> visitors to this page</h3>\n');
+    response.end();
 });
 
 app.listen(PORT);
