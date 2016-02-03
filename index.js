@@ -11,6 +11,7 @@ userCount++;
 response.writeHead(200, {'Content-Type': 'text/html'});
     response.write('<h1>Hello Oncoscape Techies!</h1>\n');
     response.write('<hr>\n');
+    response.write('<h2>It's tea time</h2>');
     response.write('<h3>There have been <strong>' + userCount + '</strong> visitors to this page</h3>\n');
     response.end();
 });
